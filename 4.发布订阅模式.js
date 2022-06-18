@@ -15,14 +15,14 @@ const events = {
 
 
 events.on((key,value) => {
-    console.log('属性:' + key+ "值" + value);
-});
+    console.log(key,value)
+})
+
 
 fs.readFile(path.resolve(__dirname,'./name.txt'),'utf-8',(err,data) => {
-    events.emit('name',data)
+    events.emit('name',data);
 });
 
 fs.readFile(path.resolve(__dirname,'./age.txt'),'utf-8',(err,data) => {
-    events.emit('age',data);
+    events.emit('age',data)
 })
-
