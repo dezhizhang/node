@@ -1,7 +1,4 @@
-# node
 
-### 发布订阅
-```js
 
 const fs = require('fs');
 const path = require('path');
@@ -29,4 +26,3 @@ fs.readFile(path.resolve(__dirname,'./age.txt'),'utf-8',(err,data) => {
     events.emit('age',data);
 })
 
-```
