@@ -1,8 +1,9 @@
 
 const fs = require('fs');
 const path = require('path');
+const ReadStream = require('./readstream');
 
-const rs = fs.createReadStream(path.resolve(__dirname,'./node.md'),{
+const rs = new ReadStream(path.resolve(__dirname,'./node.md'),{
     flags:'r',
     encoding:null,
     autoClose:true,
